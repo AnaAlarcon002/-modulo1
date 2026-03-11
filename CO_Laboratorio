@@ -1,4 +1,13 @@
 Al trabajar con colab research (https://colab.research.google.com/drive/11SlSRdgx5Yvvth0YbLTl7PcjanZb2wJv#scrollTo=8tA3yW4q1I06); hemos visto cómo se pueden 
 resolver cuentas matemáticas con facilidad.
-
-![Logo del proyecto](./Captura de pantalla 2026-03-11 191841.jpg)
+Además de las operaciones aritméticas básicas, Colab facilita el manejo de matemáticas avanzadas mediante el uso de librerías especializadas. Algunos puntos 
+clave para el resumen son:Cómputo Simbólico con SymPy: A diferencia de una calculadora tradicional, permite trabajar con variables para simplificar 
+expresiones, resolver ecuaciones algebraicas, derivar e integrar funciones de forma exacta sin necesidad de valores numéricos iniciales.Cálculo Numérico con 
+NumPy: Es la herramienta fundamental para el manejo de matrices y vectores. Permite realizar operaciones complejas en grandes conjuntos de datos de manera 
+eficiente, algo esencial para el análisis de señales o sistemas mecánicos.Visualización de Funciones con Matplotlib: Una de las mayores ventajas es la capacidad 
+de graficar resultados inmediatamente. Se pueden crear gráficos 2D y 3D para visualizar el comportamiento de funciones, oscilaciones o respuestas de sistemas de 
+control.Resolución de Ecuaciones Diferenciales: Mediante librerías como SciPy, es posible simular sistemas dinámicos, permitiendo obtener soluciones numéricas 
+para modelos que describen movimientos vibratorios o circuitos eléctricos.Ventajas de este flujo de trabajoDocumentación Interactiva: Se pueden mezclar bloques 
+de código con bloques de texto (Markdown) para explicar el procedimiento paso a paso.Accesibilidad: No requiere instalación local, ya que todo se ejecuta en la nube, 
+facilitando el acceso desde cualquier dispositivo con navegador.Reproducibilidad: Permite compartir el cuaderno fácilmente, asegurando que cualquier persona pueda 
+ejecutar las mismas cuentas y obtener los mismos resultados.

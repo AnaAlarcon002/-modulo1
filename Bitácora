@@ -83,7 +83,7 @@ conductor de 1 mm de diámetro, obteniendo los siguientes parámetros para el di
   .Separación de puntas (C): 25.8mm.
   .Longitud total del excitador (Lexc): 964.7mm.
   .Longitud total del reflector (Lref): 1031.9mm.
-Con un fondo total de solo $275.4\text{ mm}$, esta antena es extremadamente eficiente para su tamaño.
+Con un fondo total de solo 275.4mm, esta antena es extremadamente eficiente para su tamaño.
 Hicimos esta elección para asegurar que el sistema de seguimiento controlado por Arduino pueda mover la 
 estructura sin problemas de inercia excesiva, manteniendo la seguridad de los 5V para no quemar nada.
 

@@ -99,3 +99,107 @@ Cerraron la facultad por zonda. El profe nos compartió un link para ideas de an
 
 
 -------------------------------------------
+
+13 de mayo de 2026
+
+Verificamos la comparativa entre Yagi y Moxon y decidimos quedarnos con la Moxon:
+Aunque la antena Yagi-Uda presentaba una ganancia bruta superior por 2.4dB, realizamos un análisis de compromiso de ingeniería 
+(trade-off) y concluimos que la antena Moxon es la opción óptima para nuestro sistema mecatrónico debido a las siguientes razones 
+de diseño:
+. Minimización de la Inercia y Torque Mecánico: Al ser una estructura geométrica plegada y cerrada, la Moxon concentra su masa cerca 
+del centro de rotación, reduciendo el brazo de palanca a menos de la mitad en comparación con el boom de la Yagi. Esto disminuye 
+drásticamente el momento de inercia y el torque requerido, permitiendo que nuestro sistema de transmisión por bandas opere de forma 
+aliviada bajo la restricción eléctrica de 5V para proteger el Arduino.
+. Tolerancia al Error de Seguimiento (Ancho de Haz): La ISS presenta una velocidad angular elevada en su paso cenital. El patrón de 
+radiación de la Moxon posee un lóbulo principal más ancho que el de la Yagi. Esto otorga un "colchón de seguridad" crítico: si el lazo 
+de control o el algoritmo de Gpredict experimentan un pequeño desvío de pasos o backlash mecánico, la antena continuará percibiendo la 
+señal del satélite sin perder el enlace.
+. Inmunidad al Ruido Local (Relación Frente/Dorso): Al apuntar al cielo durante el rastreo, la parte posterior de la antena queda orientada 
+directamente hacia el suelo de la facultad. La excelente relación frente/dorso (Front-to-Back ratio) de la estructura Moxon cancela de forma 
+casi perfecta la interferencia electromagnética terrestre y el ruido de fondo local, garantizando una mayor pureza espectral al ingresar al 
+software SDR++.Con esta decisión validada por el equipo, procedimos a congelar la etapa de simulación para iniciar el cálculo milimétrico de 
+corte de los elementos constructivos.
+
+Nos separamos en grupos:
+. Foto a la estación: Un grupo fue al techo del edificio para intentarlo durante el horario de clase, pero al no conseguirlo se siguió la activdad en casa 
+días después (Tomi).
+. Rotores: Un grupo se dedicó a la concepción, diseño y fabricación de los rotores que se utilizarán en la base para la cámara para sacar fotos guiadas del 
+satélite. 
+. Antena: se trajeron caños PBC y en la asociación se cortaron para tener los sostenes de la antena. Se trajo un cable, se midió y se cortó el segmento necesario.
+. Instalación Ubuntu y SDR vía web: En una computadora de la oficina de logística instalamos ubuntu linux como servidor operativo. Días más tarde se instalaron PhantomSDR y NegroK.
+PhantomSDR decodifica la señal de la antena y lo pone en un local host. Para suplirlo instalamos el NegroK que agarra el local host y lo publica. Tiene ancho de banda limitado, por lo que
+pocos pueden escucharlo a la vez.
+
+-------------------------------------------
+
+20 de mayo de 2026
+
+El grupo de los rotores se juntó en la asociación a seguir con el diseño.
+El grupo de la antena se congregó en la oficina de logística.
+La antena quedó preparada y fue probada con el handie frente a edificio de gobierno. Pudimos escuchar a un radioaficionado.
+Se terminó el programa registro_gpredict.py. Es el código que puede recibir datos del gpredict para ponerlos en un archivo .txt
+También se hizo uno que manda las cosas por puerto serie para que lo reciba el microcontrolador (gpredict.cpp).
+
+-------------------------------------------
+
+22 de mayo de 2026
+
+Se terminó el programa stepper_control.ino para controlar los motores paso a paso
+
+-------------------------------------------
+
+23 de mayo de 2026
+
+Se terminó el programa motor_driver.hpp y stepper_control.ino.
+
+-------------------------------------------
+
+27 de mayo de 2026
+
+El grupo de codificación logró terminar el código para que los motores PaP funcionen recibiendo los ángulos.
+En la oficina de logistica se logró que el gpredict mande los comandos al programa en C++.
+Se logró que se mande por puerto serie los comandos.
+
+-------------------------------------------
+
+3 de junio de 2026
+
+Pudimos hacer funcionar el programa SDR++ y escuchamos frecuencias de radios locales para verificar funcionamiento. Intentamos con la frecuencia de la ISS pero no se pudo escuchar.
+
+-------------------------------------------
+
+4 de junio de 2026
+
+Continúan intentos de escucha de ISS no exitosos.
+
+-------------------------------------------
+
+5 de junio de 2026
+
+Un alumno se llevó la antena e intentó particularmente escuchar la ISS. No exitoso.
+
+-------------------------------------------
+
+7 de junio de 2026
+Siguieron los intentos pero no se espudo escuchar porque los días nublados distorcionaban las señales.
+Se dividieron las piezas para la impresión 3D:
+. Anillo de tamaño mediano
+. Contratapa Torre tamaño grande
+. Cuerpo Tambor, muy grande
+. Eje, de tamaño mediano
+. Engranajes chicos
+. Guía de rulemanes 
+. MordazaT_v3
+. Polea chica
+. Polea grande
+. Rueda_loca_tensor
+. Pensador_tensor
+. Tapa tambor_v2
+. Cuerpo torre
+
+-------------------------------------------
+
+9 de junio de 2026
+
+Se modificaron los tamaños de piezas que no ensamblaban.
+Se ensambló el trabajo final.
